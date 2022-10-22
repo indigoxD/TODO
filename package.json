@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/indigoxD/TODO#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "yargs": "^17.6.0"
   }
 }
