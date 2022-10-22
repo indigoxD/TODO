@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/indigoxD/TODO/issues"
   },
-  "homepage": "https://github.com/indigoxD/TODO#readme"
+  "homepage": "https://github.com/indigoxD/TODO#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
