@@ -42,6 +42,11 @@ var deleteTodo = (title) =>{
     return todos.length !== filteredtodos.length;
 };
 
+// list all todo items //
+var listTodos = () =>{
+    return fetchTodos();
+};
+
 // utility functions
 var fetchTodos = () =>{
     try{
@@ -52,11 +57,27 @@ var fetchTodos = () =>{
     }
 };
 
+//read a todo item //
+var readTodo = (title) => {
+    var todos = fetchTodos();
+    var filteredtodos = todos.filter((todo) => todo.title === title);
+    return filteredtodos[0];
+}
+
 var saveTodos = (todos) => {
     fs.writeFileSync('todos-data.json', JSON.stringify(todos));
 };
 
+var logTodo = (todo) =>{
+    console.log('------');
+    console.log('Its title is: ${todo.title}');
+};
+
 module.exports ={
         addTodo,
-        deleteTodo
+        deleteTodo,
+        fetchTodos,
+        readTodo,
+        logTodo
+        
     };
