@@ -26,4 +26,10 @@ console.log('Running app.js');
 
 const fs = require('fs');
 const _ = require('lodash');
+const yargs = require('yargs');
 
+const todos = require('./todos.js');
+
+const args = yargs.argv;
+
+console.log(args.todo);
