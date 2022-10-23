@@ -22,7 +22,7 @@ console.log(todos.addTodo());
 
 // getting user input
 
-console.log('Running app.js');
+/*console.log('Running app.js');
 
 const fs = require('fs');
 const _ = require('lodash');
@@ -33,3 +33,24 @@ const todos = require('./todos.js');
 const args = yargs.argv;
 
 console.log(args.todo);
+
+console.log('You ran the command: '+ args._[0]);*/
+
+console.log('running app.js');
+
+const fs = require('fs');
+const _ = require('lodash');
+const yargs = require('yargs');
+
+const todos = require('./todos.js')
+
+const argv = yargs.argv;
+var command = argv._[0];
+
+console.log('Running command: ', command);
+
+if(command === 'addTodo'){
+    todos.addTodo(argv.title);
+}else{
+    console.log('invalid command.');
+}
