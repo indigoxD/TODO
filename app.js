@@ -63,6 +63,10 @@ if(command === 'addTodo'){
     }else{
         console.log('Whoops! the todo was not found.')
     }
+}else if(command === 'listTodos'){
+    var allTodos = todos.listTodos();
+    console.log(`Printing ${allTodos.length} todo(s).`);
+    allTodos.forEach((todo) => todos.logTodo(todo));
 }else{
     console.log('invalid command.');
 }

@@ -70,7 +70,7 @@ var saveTodos = (todos) => {
 
 var logTodo = (todo) =>{
     console.log('------');
-    console.log('Its title is: ${todo.title}');
+    console.log(`Its title is: ${todo.title}`);
 };
 
 module.exports ={
@@ -78,6 +78,7 @@ module.exports ={
         deleteTodo,
         fetchTodos,
         readTodo,
+        listTodos,
         logTodo
         
     };
